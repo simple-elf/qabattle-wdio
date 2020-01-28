@@ -1,0 +1,87 @@
+name: Autotests on Selenoid
+
+on:
+  push:
+    branches-ignore:
+      - '!master' # Push events to branches matching allure-report
+    #paths-ignore:
+    #- 'docs/**'
+
+jobs:
+  autotests:
+    name: Run autotests on selenoid
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Download CM
+        run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid configure --browsers chrome --last-versions 1 --config-dir config
+      #- run: cat config/browsers.json
+
+      - name: Docker compose
+        run: docker-compose up -d
+      #- run: docker ps -a
+      #- run: docker network ls
+
+      #- run: curl http://127.0.0.1:4444/status
+      #  continue-on-error: true
+      #- name: Curl webaapp
+      #  run: curl http://localhost:8080/
+      #  continue-on-error: true
+
+      - uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Install dependencies
+        run: mvn dependency:go-offline compile compiler:testCompile
+
+      - name: Run Test
+        if: always()
+        run: mvn test -Dbase.url=http://qabattle:8080
+        continue-on-error: true
+
+      - name: Check containers
+        if: always()
+        continue-on-error: true
+        run: |
+          docker logs qabattle
+          docker logs selenoid
+
+      - run: ls -a opt/
+
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Keep Allure history
+        run: cp -r $(pwd)/gh-pages/history/. $(pwd)/target/allure-results/history
+        continue-on-error: true
+
+      - name: Generate Allure report
+        if: always()
+        run: mvn allure:report
+        continue-on-error: true
+
+      #- uses: actions/upload-artifact@master
+      #  with:
+      #    name: allure-report
+      #    path: target/site/allure-maven-plugin
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: target/site/allure-maven-plugin
