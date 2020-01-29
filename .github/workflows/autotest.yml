@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Test
         if: always()
-        run: npm run wdio-test
+        run: npm cit
         continue-on-error: true
 
 #      - name: Check containers
