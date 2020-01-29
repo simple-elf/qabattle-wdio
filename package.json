@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf ./allure-results ./mochawesome",
     "mocha-test": "mocha --reporter mochawesome",
-    "wdio-test": "wdio wdio.conf.js",
+    "test": "wdio wdio.conf.js",
     "allure-report": "allure serve"
   },
   "keywords": [],
