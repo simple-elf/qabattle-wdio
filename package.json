@@ -4,10 +4,11 @@
   "description": "First JavaScript testing project",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf ./allure-results ./mochawesome",
+    "clean": "rimraf ./allure-results ./mochawesome ./allure-report",
     "mocha-test": "mocha --reporter mochawesome",
     "test": "wdio wdio.conf.js",
-    "allure-report": "allure serve"
+    "allure-server": "allure serve",
+    "report": "allure generate"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,8 @@
     "mochawesome": "^4.1.0",
     "wdio-chromedriver-service": "^5.0.2",
     "wdio-mochawesome-reporter": "^3.2.0",
-    "mochawesome-report-generator": "^3.1.5"
+    "mochawesome-report-generator": "^3.1.5",
+    "allure-commandline": "^2.13.0"
   },
   "dependencies": {
     "@types/chai": "^4.2.7",
