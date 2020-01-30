@@ -124,22 +124,15 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: [
-        'spec',
+        //'spec',
         //'dot',
-        //'junit',
-        //['allure', {outputDir: 'allure-results'}],
-        //'sumologic',
-        //'concise',
-        //'reportportal',
+        ['allure', {outputDir: 'allure-results'}],
         //'video',
         //'json',
-        //'cucumber',
         //['mochawesome',{
         //    outputDir: './mochawesome'
         //}]
-        //'timeline',
         //'html',
-        //'undefined'
     ],
  
     //

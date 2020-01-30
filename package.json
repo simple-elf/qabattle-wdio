@@ -9,33 +9,27 @@
     "test": "wdio wdio.conf.js",
     "allure-report": "allure serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simple-elf/qabattle-wdio.git"
+  },
   "keywords": [],
   "author": "simple-elf",
   "license": "ISC",
   "devDependencies": {
-    "@rpii/wdio-html-reporter": "^0.8.6",
     "@wdio/allure-reporter": "^5.18.6",
     "@wdio/cli": "^5.18.6",
-    "@wdio/concise-reporter": "^5.18.6",
-    "@wdio/dot-reporter": "^5.18.6",
-    "@wdio/junit-reporter": "^5.18.6",
     "@wdio/local-runner": "^5.18.6",
     "@wdio/mocha-framework": "^5.18.6",
     "@wdio/spec-reporter": "^5.18.6",
-    "@wdio/sumologic-reporter": "^5.18.6",
     "@wdio/sync": "^5.18.6",
     "chai": "^4.2.0",
     "chromedriver": "^79.0.2",
     "mocha": "^7.0.1",
     "mochawesome": "^4.1.0",
     "wdio-chromedriver-service": "^5.0.2",
-    "wdio-cucumber-reporter": "0.0.2",
-    "wdio-json-reporter": "^1.3.1",
-    "wdio-markdown-reporter": "github:carmenmitru/wdio-markdown-reporter",
     "wdio-mochawesome-reporter": "^3.2.0",
-    "wdio-reportportal-reporter": "^5.2.3",
-    "wdio-timeline-reporter": "^5.1.2",
-    "wdio-video-reporter": "^2.0.0"
+    "mochawesome-report-generator": "^3.1.5"
   },
   "dependencies": {
     "@types/chai": "^4.2.7",
