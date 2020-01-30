@@ -1,4 +1,4 @@
-exports.config = {
+const wdioConfig = {
     //
     // ====================
     // Runner Configuration
@@ -208,9 +208,10 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine).
      */
     afterTest: function(test, context, { error, result, duration, passed, retries }) {
-        if (!passed) {
-            browser.takeScreenshot();
-        }
+        // if (!passed) {
+        //     browser.takeScreenshot();
+        // }
+        browser.takeScreenshot();
     },
 
 
@@ -264,3 +265,13 @@ exports.config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
+
+if (process.env.SELENOID) {
+    wdioConfig.hostname = process.env.SELENOID
+    wdioConfig.port = 4444
+    wdioConfig.path = "/wd/hub"
+} else {
+    wdioConfig.services = ["chromedriver"];
+}
+
+exports.config = wdioConfig;
