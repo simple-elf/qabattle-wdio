@@ -64,7 +64,7 @@ jobs:
 
       - name: Generate Allure report
         if: always()
-        run: allure generate
+        run: npm i allure-comandline && allure generate
         continue-on-error: true
 
       - uses: actions/upload-artifact@master
