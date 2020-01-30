@@ -1,0 +1,71 @@
+[ {
+  "uid" : "2178bffa4b168f83",
+  "name" : "async",
+  "time" : {
+    "start" : 1580396591231,
+    "stop" : 1580396592869,
+    "duration" : 1638
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "92c94c48fcdef1f1",
+  "name" : "\"before each\" hook",
+  "time" : {
+    "start" : 1580396572911,
+    "stop" : 1580396575192,
+    "duration" : 2281
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e19e72707efd516c",
+  "name" : "should have a product page call-to-action",
+  "time" : {
+    "start" : 1580396577939,
+    "stop" : 1580396590166,
+    "duration" : 12227
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "47b76458b5a7c443",
+  "name" : "should contain the correct url",
+  "time" : {
+    "start" : 1580396590166,
+    "stop" : 0,
+    "duration" : -1580396590166
+  },
+  "status" : "unknown",
+  "severity" : "normal"
+}, {
+  "uid" : "80b4f5075119244c",
+  "name" : "should allow you to purchase a robot",
+  "time" : {
+    "start" : 1580396572911,
+    "stop" : 0,
+    "duration" : -1580396572911
+  },
+  "status" : "unknown",
+  "severity" : "normal"
+}, {
+  "uid" : "57bf2c27dfd90cce",
+  "name" : "\"before each\" hook",
+  "time" : {
+    "start" : 1580396590166,
+    "stop" : 1580396591231,
+    "duration" : 1065
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "98414b1fe565608e",
+  "name" : "should have the correct title",
+  "time" : {
+    "start" : 1580396571796,
+    "stop" : 0,
+    "duration" : -1580396571796
+  },
+  "status" : "unknown",
+  "severity" : "normal"
+} ]

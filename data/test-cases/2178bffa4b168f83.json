@@ -1,0 +1,168 @@
+{
+  "uid" : "2178bffa4b168f83",
+  "name" : "async",
+  "fullName" : "Homepage.async",
+  "historyId" : "abb19d00e9207d8e55f982a5940d90fa",
+  "time" : {
+    "start" : 1580396591231,
+    "stop" : 1580396592869,
+    "duration" : 1638
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "expected 'Ой!' to equal 'Яндекс'",
+  "statusTrace" : "AssertionError: expected 'Ой!' to equal 'Яндекс'\n                    at Context.<anonymous> (/home/runner/work/qabattle-wdio/qabattle-wdio/test/specs/start.js:32:26)\n                    at processTicksAndRejections (internal/process/task_queues.js:94:5)\n                    at async Context.executeAsync (/home/runner/work/qabattle-wdio/qabattle-wdio/node_modules/@wdio/utils/build/shim.js:123:12)\n                    at async Context.testFrameworkFnWrapper (/home/runner/work/qabattle-wdio/qabattle-wdio/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:63:14)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "expected 'Ой!' to equal 'Яндекс'",
+    "statusTrace" : "AssertionError: expected 'Ой!' to equal 'Яндекс'\n                    at Context.<anonymous> (/home/runner/work/qabattle-wdio/qabattle-wdio/test/specs/start.js:32:26)\n                    at processTicksAndRejections (internal/process/task_queues.js:94:5)\n                    at async Context.executeAsync (/home/runner/work/qabattle-wdio/qabattle-wdio/node_modules/@wdio/utils/build/shim.js:123:12)\n                    at async Context.testFrameworkFnWrapper (/home/runner/work/qabattle-wdio/qabattle-wdio/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:63:14)",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1580396591231,
+        "stop" : 1580396591796,
+        "duration" : 565
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "91f3ea6c716f7848",
+        "name" : "Request",
+        "source" : "91f3ea6c716f7848.json",
+        "type" : "application/json",
+        "size" : 28
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1580396591799,
+        "stop" : 1580396592376,
+        "duration" : 577
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6a68269492b23b45",
+        "name" : "Request",
+        "source" : "6a68269492b23b45.json",
+        "type" : "application/json",
+        "size" : 28
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/title",
+      "time" : {
+        "start" : 1580396592376,
+        "stop" : 1580396592382,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4e07ba97dcb1aa4e",
+        "name" : "Response",
+        "source" : "4e07ba97dcb1aa4e.json",
+        "type" : "application/json",
+        "size" : 7
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/screenshot",
+      "time" : {
+        "start" : 1580396592383,
+        "stop" : 1580396592868,
+        "duration" : 485
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f4f86b8e8dcdd89c",
+        "name" : "Screenshot",
+        "source" : "f4f86b8e8dcdd89c.png",
+        "type" : "image/png",
+        "size" : 826929
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Homepage"
+  }, {
+    "name" : "testClass",
+    "value" : "Homepage"
+  }, {
+    "name" : "testMethod",
+    "value" : "async"
+  }, {
+    "name" : "package",
+    "value" : "Homepage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "91e24fdd83f77bd6",
+      "status" : "unknown",
+      "time" : {
+        "start" : 1580396591231,
+        "stop" : 0,
+        "duration" : -1580396591231
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2178bffa4b168f83.json",
+  "parameterValues" : [ "chrome" ]
+}

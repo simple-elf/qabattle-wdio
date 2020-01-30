@@ -1,0 +1,26 @@
+{
+  "total" : 2,
+  "items" : [ {
+    "uid" : "a42c9f51ba1bf76b8f087ce0758272d2",
+    "name" : "Homepage",
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 2,
+      "total" : 5
+    }
+  }, {
+    "uid" : "871fee0068be527f19d46a2445143683",
+    "name" : "Product Page",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 1,
+      "total" : 2
+    }
+  } ]
+}
