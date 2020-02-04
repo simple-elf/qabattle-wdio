@@ -1,8 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Thu Jan 30 15:03:11 UTC 2020","Thu Jan 30 15:03:12 UTC 2020","1638","","Homepage","","Homepage","async","async",""
-"passed","Thu Jan 30 15:02:52 UTC 2020","Thu Jan 30 15:02:55 UTC 2020","2281","","Product Page","","Product Page","""before each"" hook","""before each"" hook",""
-"broken","Thu Jan 30 15:02:57 UTC 2020","Thu Jan 30 15:03:10 UTC 2020","12227","","Homepage","","Homepage","should have a product page call-to-action","should have a product page call-to-action",""
-"unknown","Thu Jan 30 15:03:10 UTC 2020","Thu Jan 01 00:00:00 UTC 1970","-1580396590166","","Homepage","","Homepage","should contain the correct url","should contain the correct url",""
-"unknown","Thu Jan 30 15:02:52 UTC 2020","Thu Jan 01 00:00:00 UTC 1970","-1580396572911","","Product Page","","Product Page","should allow you to purchase a robot","should allow you to purchase a robot",""
-"passed","Thu Jan 30 15:03:10 UTC 2020","Thu Jan 30 15:03:11 UTC 2020","1065","","Homepage","","Homepage","""before each"" hook","""before each"" hook",""
-"unknown","Thu Jan 30 15:02:51 UTC 2020","Thu Jan 01 00:00:00 UTC 1970","-1580396571796","","Homepage","","Homepage","should have the correct title","should have the correct title",""
