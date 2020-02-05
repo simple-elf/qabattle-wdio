@@ -7,7 +7,7 @@
     "clean": "rimraf ./allure-results ./mochawesome ./allure-report",
     "mocha-test": "mocha --reporter mochawesome",
     "test": "wdio wdio.conf.js",
-    "allure-server": "allure serve",
+    "allure-serve": "allure serve",
     "report": "allure generate"
   },
   "repository": {
@@ -18,23 +18,40 @@
   "author": "simple-elf",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/allure-reporter": "^5.18.6",
     "@wdio/cli": "^5.18.6",
     "@wdio/local-runner": "^5.18.6",
-    "@wdio/mocha-framework": "^5.18.6",
+    "@wdio/mocha-framework": "^5.18.6"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@types/chai": "^4.2.7",
+    "@types/expect": "^1.20.3",
     "@wdio/spec-reporter": "^5.18.6",
     "@wdio/sync": "^5.18.6",
+    "@wdio/allure-reporter": "^5.16.16",
     "chai": "^4.2.0",
-    "chromedriver": "^79.0.2",
     "mocha": "^7.0.1",
     "mochawesome": "^4.1.0",
+    "chromedriver": "^79.0.2",
     "wdio-chromedriver-service": "^5.0.2",
     "wdio-mochawesome-reporter": "^3.2.0",
     "mochawesome-report-generator": "^3.1.5",
+    "webdriverio": "^5.18.6",
     "allure-commandline": "^2.13.0"
   },
-  "dependencies": {
-    "@types/chai": "^4.2.7",
-    "webdriverio": "^5.18.6"
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
