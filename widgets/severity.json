@@ -1,0 +1,11 @@
+[ {
+  "uid" : "d2d4a764a6cd8ea8",
+  "name" : "should have the correct title",
+  "time" : {
+    "start" : 1580921627062,
+    "stop" : 1580921631416,
+    "duration" : 4354
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Login page",
+    "children" : [ {
+      "name" : "should have the correct title",
+      "uid" : "d2d4a764a6cd8ea8",
+      "parentUid" : "c2d57503ceff46fd1c9bad0fe50e2008",
+      "status" : "passed",
+      "time" : {
+        "start" : 1580921627062,
+        "stop" : 1580921631416,
+        "duration" : 4354
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "c2d57503ceff46fd1c9bad0fe50e2008"
+  } ],
+  "name" : "suites"
+}

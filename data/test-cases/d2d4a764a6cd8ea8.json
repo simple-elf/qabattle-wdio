@@ -1,0 +1,251 @@
+{
+  "uid" : "d2d4a764a6cd8ea8",
+  "name" : "should have the correct title",
+  "fullName" : "Login page.should have the correct title",
+  "historyId" : "fc1b1535489afe0d02dab3e6e3f6983a",
+  "time" : {
+    "start" : 1580921627062,
+    "stop" : 1580921631416,
+    "duration" : 4354
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open Login page",
+      "time" : {
+        "start" : 1580921627064,
+        "stop" : 1580921631169,
+        "duration" : 4105
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST /session/:sessionId/url",
+        "time" : {
+          "start" : 1580921627067,
+          "stop" : 1580921631100,
+          "duration" : 4033
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "30d4dddb7a3270e4",
+          "name" : "Request",
+          "source" : "30d4dddb7a3270e4.json",
+          "type" : "application/json",
+          "size" : 46
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST /session/:sessionId/element",
+        "time" : {
+          "start" : 1580921631101,
+          "stop" : 1580921631138,
+          "duration" : 37
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "99ce0282af8f5de2",
+          "name" : "Request",
+          "source" : "99ce0282af8f5de2.json",
+          "type" : "application/json",
+          "size" : 66
+        }, {
+          "uid" : "8b1db6235be175fd",
+          "name" : "Response",
+          "source" : "8b1db6235be175fd.json",
+          "type" : "application/json",
+          "size" : 83
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST /session/:sessionId/execute/sync",
+        "time" : {
+          "start" : 1580921631154,
+          "stop" : 1580921631169,
+          "duration" : 15
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "eb9c368ad651c5d9",
+          "name" : "Request",
+          "source" : "eb9c368ad651c5d9.json",
+          "type" : "application/json",
+          "size" : 5306
+        }, {
+          "uid" : "b6c9b3ab047c73a",
+          "name" : "Response",
+          "source" : "b6c9b3ab047c73a.json",
+          "type" : "application/json",
+          "size" : 4
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 5,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "steppp",
+      "time" : {
+        "start" : 1580921631169,
+        "stop" : 1580921631188,
+        "duration" : 19
+      },
+      "status" : "failed",
+      "steps" : [ {
+        "name" : "GET /session/:sessionId/title",
+        "time" : {
+          "start" : 1580921631169,
+          "stop" : 1580921631186,
+          "duration" : 17
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "83888f5ae0b8afb",
+          "name" : "Response",
+          "source" : "83888f5ae0b8afb.json",
+          "type" : "application/json",
+          "size" : 52
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Title: Welcom to Propeller Automated Testing Championship",
+        "time" : {
+          "start" : 1580921631188,
+          "stop" : 1580921631188,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Title equals",
+      "time" : {
+        "start" : 1580921631188,
+        "stop" : 1580921631189,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ac5dceb0e096601a",
+        "name" : "dsdsds",
+        "source" : "ac5dceb0e096601a.txt",
+        "type" : "text/plain",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/screenshot",
+      "time" : {
+        "start" : 1580921631189,
+        "stop" : 1580921631415,
+        "duration" : 226
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f47d25daf35c642a",
+        "name" : "Screenshot",
+        "source" : "f47d25daf35c642a.png",
+        "type" : "image/png",
+        "size" : 176085
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 8,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Login page"
+  }, {
+    "name" : "testClass",
+    "value" : "Login page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should have the correct title"
+  }, {
+    "name" : "package",
+    "value" : "Login page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d2d4a764a6cd8ea8.json",
+  "parameterValues" : [ "chrome" ]
+}
