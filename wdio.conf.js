@@ -55,6 +55,19 @@ const wdioConfig = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        'goog:chromeOptions': {
+            useAutomationExtension: false,
+            excludeSwitches: ['enable-automation'],
+            prefs: { credentials_enable_service: false, 'profile.password_manager_enabled': false },
+            args: [
+                'disable-infobars',
+                '--disable-gpu',
+                '--no-sandbox',
+                '--disable-extensions',
+                '--disable-dev-shm-usage',
+                // '--headless',
+            ]
+        }
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -82,6 +95,7 @@ const wdioConfig = {
     //     webdriver: 'info',
     //     '@wdio/applitools-service': 'info'
     // },
+
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
@@ -91,7 +105,7 @@ const wdioConfig = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://qabattle:8080',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -124,9 +138,13 @@ const wdioConfig = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: [
-        //'spec',
+        'spec',
         //'dot',
-        ['allure', {outputDir: 'allure-results'}],
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+        }],
         //'video',
         //'json',
         //['mochawesome',{
@@ -164,16 +182,26 @@ const wdioConfig = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // beforeSession: function (config, capabilities, specs) {
-    // },
+    beforeSession: function (config, capabilities, specs) {
+        require('@babel/register');
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        /**
+         * Setup the Chai assertion framework
+         */
+        const chai    = require('chai');
+        global.expect = chai.expect;
+        global.assert = chai.assert;
+        global.should = chai.should();
+
+        global.allure = require('@wdio/allure-reporter').default;
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name
@@ -213,7 +241,6 @@ const wdioConfig = {
         // }
         browser.takeScreenshot();
     },
-
 
     /**
      * Hook that gets executed after the suite has ended
@@ -272,6 +299,7 @@ if (process.env.SELENOID) {
     wdioConfig.path = "/wd/hub"
 } else {
     wdioConfig.services = ["chromedriver"];
+    wdioConfig.baseUrl = 'http://212.237.55.99:8081';
 }
 
 exports.config = wdioConfig;
